@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/ASSETS/CSS/style.css" />
+    <link rel="stylesheet" href="/ASSETS/CSS/responsive.css" /> 
 
     <script src="/ASSETS/JS/script.js" defer></script>
 </head>
@@ -22,6 +23,12 @@
     <!-- --------- Navegação ----------- -->
     <header>
         <nav class="menu">
+            <div class="menu-hamburguer" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
             <ul>
                 <li><a href="#animais">animais</a></li>
                 <li><a href="#faq">perguntas frequentes</a></li>
@@ -41,9 +48,13 @@
             <li><img src="/ASSETS/IMAGES/imagem5.jpg" alt=""></li>
             <li><img src="/ASSETS/IMAGES/imagem6.jpg" alt=""></li>
 
+            <li><img src="/ASSETS/IMAGES/imagem4.jpg" alt=""></li>
+            <li><img src="/ASSETS/IMAGES/imagem5.jpg" alt=""></li>
+            <li><img src="/ASSETS/IMAGES/imagem6.jpg" alt=""></li>
+
         </ul>
         <div class="animais-descricao">
-            <section>
+            <section data-showDesc="true">
                 <h2>Raposa</h2>
                 <p>Raposas são pequenos a médios mamíferos onívoros pertencentes a vários gêneros da família Canidae. As raposas têm o crânio achatado, orelhas triangulares verticais, focinho pontiagudo e ligeiramente arrebitado e uma cauda longa e espessa.</p>
                 <p>Doze espécies pertencem ao grupo monofilético de "raposas verdadeiras" do gênero Vulpes. Aproximadamente outras 25 espécies atuais ou extintas são parte do grupo parafilético das raposas sul-americanas ou do grupo periférico, que consiste na raposa-orelhas-de-morcego, raposa-cinzenta e raposa-das-ilhas.</p>
@@ -55,7 +66,6 @@
             <section>
                 <h2>Esquilo</h2>
                 <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim, quatipuru, agutipuru ou acutipuru. Na Galiza e em algumas zonas de Portugal, também são conhecido por esquio. Os esquilos estão espalhados por quase todo o mundo, a maioria nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio. Como todos os roedores, possuem presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
-
             </section>
 
             <section>
@@ -134,7 +144,7 @@
 
 
     <footer class="copy">
-        <p>Todos os direitos reservados</p>
+        <p>Projeto desenvolvido a partir dos ensinamentos do curso de HTML, CSS e JS da <<a href="https://www.origamid.com/">ORIGAMID</a>></p>
     </footer>
 
 

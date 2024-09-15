@@ -8,4 +8,5 @@ Projeto desenvolvido com base nas orientações do curso ORIGAMID
     + Imagens: Setas ASCII
     + Grid Layout
     + Flexbox
-    + Pseudo Elementos // Pseudoclasses CSS: ::BEFORE
+    + Pseudo Elementos // Pseudoclasses CSS: +  ::BEFORE
+    + Responsividade
