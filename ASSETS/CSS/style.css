@@ -96,12 +96,10 @@ header {
 }
 
 
-/* .menu-hamburguer[aria-expanded = true] ~ ul {
-    display: none;
+.menu-hamburguer[aria-expanded = true] ~ ul {
+    display: flex;
     position: absolute;
-    
-
-} */
+}
 
 /* .menu-hamburguer[aria-expanded = true]:nth-child(0) {
     opacity: 0;
@@ -110,13 +108,30 @@ header {
 
 
 
-/* .menu-hamburgue-openned span {
+.menu-hamburguer[aria-expanded = true] span {
     width: 30px;
-    border: .2rem solid red;
+    border: .2rem solid black;
     border-radius: 30px;
     background-color: black;
     margin-bottom: 5px;
-} */
+}
+
+.menu-hamburguer .rotate_line1 {
+    rotate: 50deg;
+    position: absolute;
+    width: 10px;
+    border: .1rem solid black;
+}
+.menu-hamburguer .rotate_line3 {
+    rotate: -50deg;
+    position: absolute;
+    width: 10px;
+    border: .1rem solid black;
+}
+
+
+
+
 
 .grid-section {
     grid-column: 2 / 4;
@@ -208,12 +223,14 @@ header {
 
 .faq-lista {
     grid-column: 2 / 4;
+    position: relative;
 }
 
 .faq-lista dt {
     font-family: 'IBM Plex Mono', monospace; 
     font-weight: bold;
-    margin-bottom: .5rem;
+    margin-top: 2rem;
+    margin-bottom: .7rem;
     color: #e54;
     cursor: pointer;
 }
@@ -229,10 +246,17 @@ header {
 
 .faq-lista dd {
     font-family: Helvetica, Arial, sans-serif;
-    margin-bottom: .5rem;
+    margin-bottom: 1.8rem;
     margin-left: 30px;
-    margin-bottom: 2rem;
 }
+
+.faq-lista dd[data-menuOpened = 'false'] {
+    background-color: red;
+    display: none;
+}
+
+
+
 
 .contato {
     grid-gap: 10px;
