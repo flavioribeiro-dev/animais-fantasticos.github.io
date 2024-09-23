@@ -252,7 +252,7 @@ header {
 
 .faq-lista dd[data-menuOpened = 'false'] {
     background-color: red;
-    display: none;
+    display: block;
 }
 
 
