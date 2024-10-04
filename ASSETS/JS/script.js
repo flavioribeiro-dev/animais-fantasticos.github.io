@@ -21,6 +21,7 @@ menuHamburguer.addEventListener('click', () => {
     }
 })
 
+
 // ================================================
 
 const tabMenu = document.querySelectorAll('.js-tabmenu li');   
@@ -41,6 +42,9 @@ tabMenu.forEach((item, index) => {
 })
 
 
+//  ========================================
+
+
 
 
 
@@ -58,20 +62,23 @@ tabMenu.forEach((item, index) => {
 
 const faqLista = document.querySelectorAll('.faq-lista dt');
 
-faqLista.forEach((faq) => {
-    faq.addEventListener('click', clicou);
+
+faqLista.forEach((faq, index) => {
+    faq.addEventListener('click', exibirFaq);
 })
 
-function clicou(item) {
-    const faqListaDesc = item.currentTarget.nextElementSibling;
-    console.log( faqListaDesc );
+function exibirFaq(event) {
+    const faqListaDesc = event.currentTarget.nextElementSibling;
+
+    if(faqListaDesc.classList.contains('ativo')) {
+        faqListaDesc.classList.remove('ativo');
+    } else {
+        faqListaDesc.classList.add('ativo');
+    }
 }
 
 
-
-
-
-
+// ================================================
 
 
 

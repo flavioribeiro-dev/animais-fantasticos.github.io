@@ -194,7 +194,7 @@ header {
 }
 .js-tabcontent section.ativo {
     display: block !important;
-    animation: showTab .5s forwards;
+    animation: showTabMenu 1.3s forwards;
 }
 
 .animais h2 {
@@ -254,16 +254,20 @@ header {
     font-family: Helvetica, Arial, sans-serif;
     margin-bottom: 1.8rem;
     margin-left: 30px;
+    display: none;
+    
+    animation-name: showRespostaFaq;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
 }
-
-
-
-
-
-.faq-lista dd[data-menuOpened = 'false'] {
-    background-color: red;
+.faq-lista dd.ativo {
     display: block;
 }
+
+
+
+
+
 
 
 
