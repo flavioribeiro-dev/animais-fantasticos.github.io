@@ -188,12 +188,13 @@ header {
     grid-column: 3;
 }
 
-.animais-descricao section {
+.js-tabcontent section {
     display: none;
     margin-bottom: 1rem;
 }
-.animais-descricao section.ativo {
-    display: block;
+.js-tabcontent section.ativo {
+    display: block !important;
+    animation: showTab .5s forwards;
 }
 
 .animais h2 {
