@@ -49,6 +49,23 @@ tabActive();
 
 //  ========================================
 
+const section = document.querySelectorAll('.js-scroll');
+
+function animaScroll() {
+    
+    section.forEach((item) => {
+        const sectionTop = item.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+        
+        if(sectionTop < 0) {
+            item.classList.add('ativo');
+        }
+    })
+
+}
+
+window.addEventListener('scroll', animaScroll);
+}
 
 
 
