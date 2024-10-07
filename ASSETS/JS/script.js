@@ -49,60 +49,81 @@ tabActive();
 
 //  ========================================
 
-const section = document.querySelectorAll('.js-scroll');
+function animacaoScroll() {
+    const section = document.querySelectorAll('.js-scroll');
 
-function animaScroll() {
-    
-    section.forEach((item) => {
-        const sectionTop = item.getBoundingClientRect().top;
-            const screenHeight = window.innerHeight;
+    function animaScroll() {
         
-        if(sectionTop < 0) {
-            item.classList.add('ativo');
-        }
-    })
+        section.forEach((item) => {
+            const sectionTop = item.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
 
+            
+            if(sectionTop < screenHeight*0.6 ) {
+                item.classList.add('ativo');
+            }
+        })
+    }
+
+    window.addEventListener('scroll', animaScroll);
 }
 
-window.addEventListener('scroll', animaScroll);
-}
-
-
-
-
-
-
-
-
-
-
-
-
+animacaoScroll();
 
 
 // ==============================================
 
-const faqLista = document.querySelectorAll('.faq-lista dt');
+function animaFaq() {
+    const faqLista = document.querySelectorAll('.faq-lista dt');
 
-
-faqLista.forEach((faq, index) => {
-    faq.addEventListener('click', exibirFaq);
-})
-
-function exibirFaq(event) {
-    const faqListaDesc = event.currentTarget.nextElementSibling;
-
-    if(faqListaDesc.classList.contains('ativo')) {
-        faqListaDesc.classList.remove('ativo');
-    } else {
-        faqListaDesc.classList.add('ativo');
+    faqLista.forEach((faq, index) => {
+        faq.addEventListener('click', exibirFaq);
+    })
+    
+    function exibirFaq(event) {
+        const faqListaDesc = event.currentTarget.nextElementSibling;
+    
+        if(faqListaDesc.classList.contains('ativo')) {
+            faqListaDesc.classList.remove('ativo');
+        } else {
+            faqListaDesc.classList.add('ativo');
+        }
     }
 }
+
+animaFaq();
 
 
 // ================================================
 
+const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
 
+function goingToSection(event) {
+    event.preventDefault();
+    
+    const href = event.currentTarget.getAttribute('href')
+    
+
+
+    console.log( href );
+}
+
+linksInternos.forEach((link) => {
+        link.addEventListener('click', goingToSection);
+})
+
+
+
+
+
+
+// function goingToSection(event) {
+//     console.log( this.currentTarget );
+// }
+
+// linksInternos.forEach((link) => {
+//     link.addEventListener('click', goingToSection);
+// })
 
 
 
