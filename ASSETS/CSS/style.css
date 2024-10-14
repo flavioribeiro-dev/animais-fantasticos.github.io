@@ -52,6 +52,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 9999;
 }
 
 .menu ul li a {
