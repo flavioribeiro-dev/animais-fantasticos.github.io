@@ -96,6 +96,10 @@ animaFaq();
 
 // ================================================
 
+
+
+
+
 const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
 
 function goingToSection(event) {
@@ -103,8 +107,6 @@ function goingToSection(event) {
     
     const href = event.currentTarget.getAttribute('href')
     
-
-
     console.log( href );
 }
 
